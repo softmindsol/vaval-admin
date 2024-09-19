@@ -96,7 +96,7 @@ const SignIn = () => {
                   disabled={isLoading}
                   className="w-full text-white bg-brand focus:ring-4 focus:outline-none focus:ring-brand/35 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-55 disabled:cursor-not-allowed"
                 >
-                  {isLoading ? 'Loadinjhmhjg...' : 'Sibghgn in'}
+                  {isLoading ? 'Loadin...' : 'Sign in'}
                 </button>
               </form>
             </div>
