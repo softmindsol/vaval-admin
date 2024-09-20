@@ -16,7 +16,7 @@ const TableOne = () => {
 
   // Dispatch the API call when the component is mounted
   useEffect(() => {
-    dispatch(fetchNewsletters());
+    dispatch(fetchNewsletters({ limit: 20, page: 1 }));
   }, [dispatch]);
 
   if (loading) {

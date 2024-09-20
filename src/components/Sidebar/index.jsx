@@ -6,6 +6,7 @@ import { ImScissors } from "react-icons/im";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { CgMenuGridR } from "react-icons/cg";
 import SidebarLinkGroup from "./SidebarLinkGroup";
+import { FaUserDoctor } from "react-icons/fa6";
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
    const location = useLocation();
@@ -98,7 +99,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
                   <li>  <NavLink
                            to="/subscribers"
-                           className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
+                           className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
                               (pathname === "/subscribers" ||
                                  pathname.includes("subscribers")) &&
                               "bg-brand text-white"
@@ -111,7 +112,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                      <li>
                         <NavLink
                            to="/appointment"
-                           className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
+                           className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium  duration-300 ease-in-out text-brand  hover:text-black-2 ${
                               (pathname === "/appointment" ||
                                  pathname.includes("appointment")) &&
                               "bg-brand text-white"
@@ -132,7 +133,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                               <React.Fragment>
                                  <NavLink
                                     to="#"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black-2  duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
+                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-brand  duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
                                        (pathname === "/barber" ||
                                           pathname.includes("barber")) &&
                                        "bg-brand text-white"
@@ -144,8 +145,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                           : setSidebarExpanded(true);
                                     }}
                                  >
-                                    <ImScissors />
-                                    Barbers
+                                    <FaUserDoctor />
+                                    Doctors
                                     <svg
                                        className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                                           open && "rotate-180"
@@ -175,29 +176,29 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                           <NavLink
                                              to="/barber/all-barbers"
                                              className={({ isActive }) =>
-                                                "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-brand " +
+                                                "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black duration-300 ease-in-out hover:text-brand " +
                                                 (isActive && "!text-black")
                                              }
                                           >
-                                             All Barbers
+                                             All Doctors
                                           </NavLink>
                                        </li>
                                        <li>
                                           <NavLink
                                              to="/barber/add-barber"
                                              className={({ isActive }) =>
-                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-brand " +
+                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black duration-300 ease-in-out hover:text-brand " +
                                                 (isActive && "!text-black")
                                              }
                                           >
-                                             Add Barber
+                                             Add Doctors
                                           </NavLink>
                                        </li>
                                        <li>
                                           <NavLink
                                              to="/barber/unavailable"
                                              className={({ isActive }) =>
-                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-brand " +
+                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black duration-300 ease-in-out hover:text-brand " +
                                                 (isActive && "!text-black")
                                              }
                                           >
@@ -223,7 +224,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                               <React.Fragment>
                                  <NavLink
                                     to="#"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
+                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-brand duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
                                        (pathname === "/services" ||
                                           pathname.includes("services")) &&
                                        "bg-gray-2 text-slate-950"
@@ -266,7 +267,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                           <NavLink
                                              to="/services/all"
                                              className={({ isActive }) =>
-                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-brand " +
+                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black duration-300 ease-in-out hover:text-brand " +
                                                 (isActive && "!text-black")
                                              }
                                           >
@@ -277,7 +278,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                           <NavLink
                                              to="/services/create"
                                              className={({ isActive }) =>
-                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-brand " +
+                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black duration-300 ease-in-out hover:text-brand " +
                                                 (isActive && "!text-black")
                                              }
                                           >
@@ -302,7 +303,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                               <React.Fragment>
                                  <NavLink
                                     to="#"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
+                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-brand duration-300 ease-in-out hover:bg-gray-2 hover:text-black-2 ${
                                        (pathname === "/slot" ||
                                           pathname.includes("slot")) &&
                                        "bg-gray-2 text-slate-950"
@@ -345,7 +346,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                           <NavLink
                                              to="/slot/set"
                                              className={({ isActive }) =>
-                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-brand " +
+                                               "group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black duration-300 ease-in-out hover:text-brand " +
                                                 (isActive && "!text-black")
                                              }
                                           >

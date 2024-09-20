@@ -13,7 +13,7 @@ export const fetchNewsletters = createAsyncThunk(
   'newsletters/fetchNewsletters',
   async () => {
     const token = getToken();
-    const response = await axios.get('http://74.208.237.94:6060/admin/newsletters', {
+    const response = await axios.get('http://74.208.237.94:6060/admin/newsletters?limit=20&page=1', {
       headers: {
         'Authorization': `Bearer ${token}`, // Include the token in the headers
       },
